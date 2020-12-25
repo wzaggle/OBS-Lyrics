@@ -69,10 +69,10 @@ function next_lyric(pressed)
 	end
 	if display_index + 1 <= #lyrics then
 		display_index = display_index + 1
+		fade_lyrics_display()
 	else
 		next_prepared(true) 
 	end
-	fade_lyrics_display()
 end
 
 function prev_lyric(pressed)
@@ -81,10 +81,10 @@ function prev_lyric(pressed)
 	end
 	if display_index > 1 then
 		display_index = display_index - 1
+		fade_lyrics_display()
 	else
 		prev_prepared(true) 
 	end
-	fade_lyrics_display()
 end
 
 function clear_lyric(pressed)
